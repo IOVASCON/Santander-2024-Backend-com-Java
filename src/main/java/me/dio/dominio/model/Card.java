@@ -1,16 +1,20 @@
 package me.dio.dominio.model;
 
 import jakarta.persistence.*;
+import java.math.BigDecimal;
 
-@Entity
+@Entity(name = "tb_card")
 public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true, nullable = false)
     private String number;
-    private Double creditLimit;
+
+    @Column(name = "available_limit", precision = 13, scale = 2, nullable = false)
+    private BigDecimal creditLimit;
 
     // Getters and Setters
     public Long getId() {
@@ -29,11 +33,11 @@ public class Card {
         this.number = number;
     }
 
-    public Double getCreditLimit() {
+    public BigDecimal getCreditLimit() {
         return creditLimit;
     }
 
-    public void setCreditLimit(Double creditLimit) {
+    public void setCreditLimit(BigDecimal creditLimit) {
         this.creditLimit = creditLimit;
     }
 }

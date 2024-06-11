@@ -3,7 +3,7 @@ package me.dio.dominio.model;
 import jakarta.persistence.*;
 import java.util.List;
 
-@Entity
+@Entity(name = "tb_application_user")
 public class ApplicationUser {
 
     @Id

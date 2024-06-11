@@ -1,18 +1,22 @@
 package me.dio.dominio.model;
 
 import jakarta.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
-public class Account {
+public class Account extends BaseItem {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @Column(nullable = false, unique = true)
     private String number;
+
+    @Column(nullable = false)
     private String agency;
-    private Double balance;
-    private Double creditLimit;
+
+    @Column(nullable = false, precision = 13, scale = 2)
+    private BigDecimal balance;
+
+    @Column(nullable = false, precision = 13, scale = 2)
+    private BigDecimal creditLimit;
 
     // Getters and Setters
     public Long getId() {
@@ -39,19 +43,19 @@ public class Account {
         this.agency = agency;
     }
 
-    public Double getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(Double balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public Double getCreditLimit() {
+    public BigDecimal getCreditLimit() {
         return creditLimit;
     }
 
-    public void setCreditLimit(Double creditLimit) {
+    public void setCreditLimit(BigDecimal creditLimit) {
         this.creditLimit = creditLimit;
     }
 }

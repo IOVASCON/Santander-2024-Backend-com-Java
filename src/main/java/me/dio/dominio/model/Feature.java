@@ -1,26 +1,14 @@
 package me.dio.dominio.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
 
-@Entity
-public class Feature {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Entity(name = "tb_feature")
+public class Feature extends BaseItem {
 
     private String icon;
     private String description;
 
-    // Getters and Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    // Getters e Setters
     public String getIcon() {
         return icon;
     }

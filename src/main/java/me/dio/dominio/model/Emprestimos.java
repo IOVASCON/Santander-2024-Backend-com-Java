@@ -1,17 +1,21 @@
 package me.dio.dominio.model;
 
 import jakarta.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
-@Entity
+@Entity(name = "tb_emprestimos")
 public class Emprestimos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Double loanLimit;
+    private BigDecimal amount;
+    private LocalDateTime date;
+    private Double interestRate;
 
-    // Getters and Setters
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -20,11 +24,27 @@ public class Emprestimos {
         this.id = id;
     }
 
-    public Double getLoanLimit() {
-        return loanLimit;
+    public BigDecimal getAmount() {
+        return amount;
     }
 
-    public void setLoanLimit(Double loanLimit) {
-        this.loanLimit = loanLimit;
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
+    }
+
+    public Double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(Double interestRate) {
+        this.interestRate = interestRate;
     }
 }
