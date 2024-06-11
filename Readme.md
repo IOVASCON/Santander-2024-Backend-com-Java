@@ -239,3 +239,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para mais detalhes.
 
 Essa versão do `README.md` inclui uma visão geral do projeto, as tecnologias utilizadas, um diagrama de classes, instruções detalhadas para configurar e executar a aplicação, informações sobre a base de dados e a documentação da API. Além disso, oferece orientações para contribuições e informações sobre a licença.
+
+## AUTOR
+
+Izairton Oliveira de Vasconcelos
+Iniciante na Linguagem Java
+Créditos de adpatação do curso " Santander 2024 - Backend com Java " da DIO.io
