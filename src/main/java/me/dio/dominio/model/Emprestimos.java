@@ -12,8 +12,12 @@ public class Emprestimos {
     private Long id;
 
     private BigDecimal amount;
+
+    @Column(nullable = false)
     private LocalDateTime date;
-    private Double interestRate;
+
+    @Column(precision = 5, scale = 2)
+    private BigDecimal interestRate;
 
     // Getters e Setters
     public Long getId() {
@@ -40,11 +44,11 @@ public class Emprestimos {
         this.date = date;
     }
 
-    public Double getInterestRate() {
+    public BigDecimal getInterestRate() {
         return interestRate;
     }
 
-    public void setInterestRate(Double interestRate) {
+    public void setInterestRate(BigDecimal interestRate) {
         this.interestRate = interestRate;
     }
 }
